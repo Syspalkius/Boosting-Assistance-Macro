@@ -19,6 +19,14 @@ IniRead,stopkey,%filepath%,commandkey,stopkey
 Gui,Add,Text, x25 yp+30 cwhite,Stop alts hotkey:
 Gui,Add,Edit, xp+130 yp w100 h20 vstopkey,%stopkey%
 
+IniRead,leftalignkey,%filepath%,commandkey,leftalignkey
+Gui,Add,Text, x25 yp+30 cwhite,Left align hotkey:
+Gui,Add,Edit, xp+130 yp w100 h20 vleftalignkey,%leftalignkey%
+
+IniRead,rightalignkey,%filepath%,commandkey,rightalignkey
+Gui,Add,Text, x25 yp+30 cwhite,Right align hotkey:
+Gui,Add,Edit, xp+130 yp w100 h20 vrightalignkey,%rightalignkey%
+
 Gui,Add,Groupbox,x25 yp+40 w300 h250 cwhite,Materials
 loop 7{
     iniRead,timer,%filepath%,timers,timer%A_Index%
@@ -38,17 +46,19 @@ loop 7{
 Gui,Add,Text,yp-205 xp-115 cblue,Delays (ms)    Hotkeys
 
 Gui,Font, s11 underline
-Gui,Add,Text,y450 x15 c53ede5 gStart,START: F1
-Gui,Add,Text,y450 x140 c53ede5 gstop,STOP: F2
-Gui,Add,Text,y450 x255 c53ede5 gpausee,PAUSE: F3
+Gui,Add,Text,y510 x15 c53ede5 gStart,START: F1
+Gui,Add,Text,y510 x140 c53ede5 gstop,STOP: F2
+Gui,Add,Text,y510 x255 c53ede5 gpausee,PAUSE: F3
 
 Gui,Font, s11 norm bold
 Gui,Add,Text,x270 y85 c%infocol% gkeyinfo,?
 Gui,Add,Button,x300 y80,List
 Gui,Add,Text,x270 y115 c%infocol% gstartinfo,?
 Gui,Add,Text,x270 y145 c%infocol% gstopinfo,?
+Gui,Add,Text,x270 y175 c%infocol% gleftaligninfo,?
+Gui,Add,Text,x270 y205 c%infocol% grightaligninfo,?
 
-Gui,Show, w350 h480,Syspalk's Boost macro %version%
+Gui,Show, w350 h540,Syspalk's Boost macro %version%
 
 
 

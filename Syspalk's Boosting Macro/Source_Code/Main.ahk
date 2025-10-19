@@ -18,6 +18,8 @@ Start:
 createhotkey()
 createstartkey()
 createstopkey()
+createleftalignkey()
+createrightalignkey()
 while (1)
 {
     checkkeys()

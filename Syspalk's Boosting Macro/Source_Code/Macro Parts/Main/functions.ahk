@@ -54,6 +54,32 @@ createstopkey()
     }
 }
 
+createleftalignkey()
+{
+    GuiControlGet,leftalignkey
+    try
+    {
+        Hotkey,%leftalignkey%,LeftAlignKey
+    }
+    catch
+    {
+        Msgbox,INVALID LEFT ALIGN HOTKEY!
+    }
+}
+
+createrightalignkey()
+{
+    GuiControlGet,rightalignkey
+    try
+    {
+        Hotkey,%rightalignkey%,RightAlignKey
+    }
+    catch
+    {
+        Msgbox,INVALID RIGHT ALIGN HOTKEY!
+    }
+}
+
 SendCommand()
 {
     Chatsend("vroom 🚗")
@@ -67,6 +93,16 @@ StartCommand()
 StopCommand()
 {
     Chatsend("stop 😎")
+}
+
+LeftAlignKey()
+{
+    Send {,}
+}
+
+RightAlignKey()
+{
+    Send {.}
 }
 
 Chatsend(text)
